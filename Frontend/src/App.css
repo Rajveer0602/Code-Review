@@ -1,0 +1,83 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+
+html,body , #root{
+  height: 100%;
+  width: 100%; 
+}
+
+main{
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 2.5rem;
+}
+
+main .left , main .right{
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+main .left{
+  background-color: #000000;
+  position: relative;
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+  max-height: 100vh; /* Ensures it doesn't overflow the viewport */
+}
+
+.left .code, .code pre , .code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+}
+
+/* main .left .review{
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219 , 219 , 255);
+  color: #000000;
+  padding: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+} */
+
+
+/* chatgpt  */
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219, 219, 255);
+  color: #000000;
+  padding: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Animation */
+main .left .review:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  background-color: rgb(180, 180, 255); /* Slightly darker shade */
+  box-shadow: 0px 6px 15px rgba(180, 180, 255, 0.6); /* Soft glow effect */
+}
+
+
+main .right{
+  background-color: #343434;
+  padding: 1rem 2rem;
+  overflow: auto;
+}
